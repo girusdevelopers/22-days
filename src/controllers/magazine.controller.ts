@@ -20,7 +20,7 @@ export const upload = async (req: Request, res: Response) => {
   try {
     const results = await s3Uploadv3(req.files as Express.Multer.File[]);
 
-    console.log(results);
+    // console.log(results);
     const file_location=results;
     const user = await Magazine.create({
       MagazineTitle,
@@ -34,7 +34,7 @@ export const upload = async (req: Request, res: Response) => {
       user: user
     });
   } catch (err) {
-    console.log(err);
+   res.send(err)
   }
 };
 

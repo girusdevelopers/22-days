@@ -33,5 +33,5 @@ const upload = multer({
 
 app.listen(PORT, () => {
   logger.info(`======= ENV: ${NODE_ENV} =======`);
-  logger.info(`🚀 App listening on the port http://192.168.29.245:${PORT}`);
+  logger.info(`🚀 App listening on the port http://localhost:${PORT}`);
 });

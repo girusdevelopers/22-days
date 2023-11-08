@@ -62,6 +62,7 @@ export const s3Uploadv3 = async (files: Express.Multer.File[]) => {
      key = `${uuidv4()}-${originalfilename}`;
     const params = {
       Bucket: process.env.AWS_BUCKET_NAME as string,
+      // Region: AWS_REGION,
       Key: `uploads/${key}`,
       Body: file.buffer,
     };

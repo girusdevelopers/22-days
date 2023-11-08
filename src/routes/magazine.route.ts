@@ -7,6 +7,7 @@ import { GetObjectCommand } from '@aws-sdk/client-s3';
 import fs from 'fs';
 import { s3 } from '@/utils/aws';
 import { readstream } from '@/controllers/index.controller';
+// import { CDNreadstream } from '../controllers/index.controller';
 const router = express.Router();
 
 // Define your routes
@@ -15,6 +16,8 @@ router.post('/upload', upload);
 router.get('/list-uploads', listUpload);
 
 router.get('/readstream/:key',readstream)
+
+// router.get('/cdn',CDNreadstream)
 
 
           
